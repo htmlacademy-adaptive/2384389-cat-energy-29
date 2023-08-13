@@ -39,11 +39,6 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 .page__body {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
@@ -237,5 +232,10 @@ li {
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+}
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
