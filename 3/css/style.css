@@ -81,7 +81,9 @@ a {
   line-height: 16px;
   text-transform: uppercase;
   color: #000000;
-  background-color: #ffffff;
+}
+.program {
+  background-color: #f2f2f2;
 }
 .about__title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -114,6 +116,9 @@ a {
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+}
+.sample {
+  background-color: #eaeaea;
 }
 .location__diller {
   font-family: "Oswald", "Arial", sans-serif;
@@ -237,5 +242,8 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.main-footer {
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=style.css.map */
