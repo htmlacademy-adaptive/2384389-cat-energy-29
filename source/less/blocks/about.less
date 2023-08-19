@@ -1,16 +1,58 @@
+.about__content {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
+}
+
 .about__title {
   font-family: @font-oswald;
   font-size: 36px;
   line-height: 40px;
   color: @title-basic;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .about__list {
   display: grid;
   gap: 24px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+    gap: 78px;
+  }
 }
 
 .about__item {
   padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    padding: 151px 60px 51px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 151px 0 57px 0;
+  }
 }

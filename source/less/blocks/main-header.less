@@ -1,0 +1,28 @@
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header {
+  position: relative;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-header__navigation-toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo-text {
+  position: absolute;
+  top: 23px;
+  left: 110px;
+}
+
+.main-header__logo-image {
+  padding-top: 13px;
+}

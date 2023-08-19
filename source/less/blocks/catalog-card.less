@@ -5,15 +5,46 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @product-name;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog-card__button {
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 20px;
+  grid-column: 1/3;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.catalog-card__button--oll-product {
+  width: 100%;
 }
 
 .catalog-card__info-item {
   font-size: 12px;
   line-height: 16px;
+}
+
+.catalog-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.catalog-card--oll-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

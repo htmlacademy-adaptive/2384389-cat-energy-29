@@ -13,6 +13,11 @@
   font-weight: 400;
   color: @product-name;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .product-addition__name-info {
@@ -23,6 +28,14 @@
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 91px;
+
+  }
 }
 
 .products-addition__action {
@@ -30,5 +43,34 @@
   line-height: 20px;
   color: @text-content-light;
   background-color: @brand-color;
+  background-image: url("../../img/decor-images/cat-case.jpg");
   text-align: center;
+  min-height: 290px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+  }
+}
+
+.products-addition__content-container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 81px;
+  }
+}
+
+.product-addition__info {
+
+}
+
+.products-addition__item {
+
+}
+
+.products-addition__list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+  }
 }
