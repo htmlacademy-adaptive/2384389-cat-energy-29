@@ -1,28 +1,51 @@
 .main-container__title {
-  color: @base-black;
+  color: @title-basic;
   font-family: @font-oswald;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0;
 }
 
 .main-container__title--hero {
-  color: @base-white;
-  text-align: center;
-  background-color: @base-green;
+  color: @text-content-light;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    color: @title-basic;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 200px 40px 90px;
+    width: 450px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .main-container__intro {
   font-family: @font-oswald;
   font-size: 14px;
   line-height: 18px;
-  color: @base-black;
+  color: @title-basic;
   text-transform: uppercase;
 }
 
 .main-container__intro--hero {
+  font-size: 14px;
   line-height: 14px;
-  text-align: center;
-  color: @base-white;
-  background-color: @base-green;
+  color: @text-content-light;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    color: @title-basic;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0  90px 50px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }

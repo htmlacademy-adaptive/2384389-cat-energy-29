@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -32,19 +33,21 @@
 
     <main class="main-container">
       <section class="main-container__hero hero">
-        <h1 class="main-container__title main-container__title--hero">
-          Функциональное питание для котов
-        </h1>
-        <p class="main-container__intro main-container__intro--hero">
-          Занялся собой? Займись котом!
-        </p>
-        <img class="hero__image" src="img/content-images/index-hero.png" width="280px" height="270px" alt="Упаковка питания для котов.">
-        <a class="hero__button button" href="form.html">
-          Подобрать программу
-        </a>
+        <div class="hero__container container">
+          <h1 class="main-container__title main-container__title--hero">
+            Функциональное питание для котов
+          </h1>
+          <p class="main-container__intro main-container__intro--hero">
+            Занялся собой? Займись котом!
+          </p>
+          <img class="hero__image" src="img/content-images/index-hero.png" width="280px" height="270px" alt="Упаковка питания для котов.">
+          <a class="hero__button button button__hero" href="form.html">
+            Подобрать программу
+          </a>
+        </div>
       </section>
 
-      <section class="main-container__programs nutrition-programs">
+      <section class="main-container__programs nutrition-programs container">
         <h2 class="visually-hidden">Программы питания.</h2>
         <ul class="nutrition-programs__list programs-list list">
           <li class="programs-list__item program program--slim">
@@ -58,11 +61,11 @@
               Каталог slim
             </a>
           </li>
-          <li class="programs-list__item program program--pro">
+          <li class="programs-list__item program program--pro ">
             <h3 class="program__title">
               Набор массы
             </h3>
-            <p class="program__info">
+            <p class="program__intro">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a class="program__catalog-link" href="#">
@@ -72,11 +75,11 @@
         </ul>
       </section>
 
-      <section class="main-container__about about">
+      <section class="main-container__about about container">
         <h2 class="about__title">
           Как это работает
         </h2>
-        <ul class="about__list list">
+        <ul class="about__list list list--about">
           <li class="about__item about__item--compound">
             Функциональное питание содержит только полезные питательные вещества.
           </li>
