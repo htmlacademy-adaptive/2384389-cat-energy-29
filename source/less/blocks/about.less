@@ -31,6 +31,8 @@
 .about__list {
   display: grid;
   gap: 24px;
+  grid-template-rows: repeat(4, min(60px));
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -39,7 +41,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
     gap: 78px;
   }
@@ -47,6 +48,11 @@
 
 .about__item {
   padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+
 
   @media (min-width: @tablet-width) {
     padding: 151px 60px 51px 0;
@@ -56,3 +62,84 @@
     padding: 151px 0 57px 0;
   }
 }
+
+/*.about__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: @brand-color;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}*/
+
+.about__item__info {
+  margin: 0;
+}
+
+.about__item--compound::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-leaf.svg");
+  background-color: @brand-color;
+  background-size: 25px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+
+.about__item--cooking::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-powder.svg");
+  background-color: @brand-color;
+  background-size: 25px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+
+.about__item--application::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-eat.svg");
+  background-color: @brand-color;
+  background-size: 25px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+
+.about__item--result::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-time.svg");
+  background-color: @brand-color;
+  background-size: 25px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+

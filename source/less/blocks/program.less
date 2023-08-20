@@ -20,6 +20,99 @@
   }
 }
 
+.program::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @brand-color;
+  top: 24px;
+  left: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 63px;
+    left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: 97px;
+    left: 52px;
+  }
+}
+
+.program--slim::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../img/decor-images/cat-slim.svg");
+  width: 36px;
+  height: 50px;
+  top: 21px;
+  left: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translate(0, -57%);
+    right: 93px;
+    left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+    background-repeat: no-repeat;
+    top: 41px;
+    transform: translate(0, 0);
+    left: 67px;
+  }
+}
+
+.program--pro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../img/decor-images/cat-pro-catalog.svg");
+  background-size: 67px 28px;
+  width: 67px;
+  height: 28px;
+  top: 35px;
+  left: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 112px;
+    background-size: 268px 112px;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 29px;
+    left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 140px;
+    height: 56px;
+    background-size: 140px 56px;
+    background-repeat: no-repeat;
+    top: 67px;
+    transform: translate(0, 0);
+    left: 30px;
+  }
+}
+
 .program__catalog-link {
   font-family: @font-oswald;
   font-size: 16px;
@@ -43,6 +136,7 @@
 
 .program {
   background-color: @highlight-background;
+  position: relative;
 }
 
 .program__intro {

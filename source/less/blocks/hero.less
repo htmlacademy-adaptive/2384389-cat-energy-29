@@ -1,39 +1,56 @@
 .hero {
   font-family: @font-oswald;
   color: @text-content-light;
-  //background: linear-gradient(#111111 50%, #ffffff 50%);
   background-image: url("../img/decor-images/cat-hero.jpg"), linear-gradient(to bottom, @brand-color 303px, @background-basic calc(100% - 303px));
   background-repeat: no-repeat;
   background-position: top center;
   text-align: center;
   padding: 27px 0 20px 0;
 
+
   @media (min-width: @tablet-width) {
     text-align: start;
-    background-color: @background-basic;
+    background-color: none;
     background-image: none;
     padding-top: 65px;
-    padding-bottom: 0;
+    padding-bottom: 526px;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/decor-images/cat-hero.jpg"), linear-gradient(90deg, @background-basic 50%, @brand-color 50%);
+    background-image: url("../../img/decor-images/background-cat-hero.jpg"), linear-gradient(90deg, transparent 50%, @brand-color 50%);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position-x: calc(50% + 360px), 50%;
     padding-top: 191px;
+    padding-bottom: 184px;
     margin-top: -81px;
   }
 }
 
-.hero__image {
-  display: block;
-  margin: 0 auto;
+.hero__container {
+  position: relative;
 }
 
-.hero__button {
+.hero__image {
   @media (min-width: @tablet-width) {
-    margin-left: 90px;
+    position: absolute;
+    top: 201px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -81px;
+    left: 487px;
+    z-index: 1;
   }
 }
 
+.hero__button {
+   @media (min-width: @tablet-width) {
+    margin-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
+}
 
