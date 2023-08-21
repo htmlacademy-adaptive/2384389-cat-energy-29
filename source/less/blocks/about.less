@@ -5,11 +5,13 @@
   @media (min-width: @tablet-width) {
     padding-top: 45px;
     padding-bottom: 47px;
+    padding-right: 105px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 71px;
     padding-bottom: 69px;
+    padding-right: 0;
   }
 }
 
@@ -37,12 +39,16 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 120px;
+    column-gap: 137px;
+    row-gap: 37px;
+    align-items: start;
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-columns: 324px 324px 324px 249px;
     grid-template-rows: min-content;
-    gap: 78px;
+    gap:
+    0;
   }
 }
 
@@ -53,27 +59,20 @@
   display: flex;
   align-items: center;
 
-
   @media (min-width: @tablet-width) {
-    padding: 151px 60px 51px 0;
+    padding: 151px 26px 57px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 151px 0 57px 0;
+    padding: 151px 105px 57px 0;
   }
 }
 
-/*.about__item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: @brand-color;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 0;
-}*/
+.about__item:nth-child(4n+4) {
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+}
 
 .about__item__info {
   margin: 0;
@@ -87,12 +86,19 @@
   height: 60px;
   background-image: url("../img/decor-images/icon-leaf.svg");
   background-color: @brand-color;
-  background-size: 25px 28px;
+  background-size: 30px 32px;
   background-position: center;
   background-repeat: no-repeat;
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
 }
 
 .about__item--cooking::after {
@@ -103,12 +109,19 @@
   height: 60px;
   background-image: url("../img/decor-images/icon-powder.svg");
   background-color: @brand-color;
-  background-size: 25px 28px;
+  background-size: 26px 29px;
   background-position: center;
   background-repeat: no-repeat;
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
 }
 
 .about__item--application::after {
@@ -119,12 +132,19 @@
   height: 60px;
   background-image: url("../img/decor-images/icon-eat.svg");
   background-color: @brand-color;
-  background-size: 25px 28px;
+  background-size: 25px 30px;
   background-position: center;
   background-repeat: no-repeat;
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
 }
 
 .about__item--result::after {
@@ -135,11 +155,19 @@
   height: 60px;
   background-image: url("../img/decor-images/icon-time.svg");
   background-color: @brand-color;
-  background-size: 25px 28px;
+  background-size: 26px 31px;
   background-position: center;
   background-repeat: no-repeat;
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    background-size: 26px 31px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
 }
 
