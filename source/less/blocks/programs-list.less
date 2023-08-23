@@ -1,0 +1,26 @@
+.programs-list {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.programs-list__item {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 0 57px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 52px 59px 52px;
+  }
+}

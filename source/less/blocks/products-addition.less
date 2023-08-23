@@ -3,7 +3,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  color: @base-black;
+  color: @title-basic;
 }
 
 .product-addition__name {
@@ -11,8 +11,13 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: @very-dark-grey;
+  color: @product-name;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .product-addition__name-info {
@@ -23,12 +28,50 @@
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 91px;
+
+  }
 }
 
 .products-addition__action {
   font-size: 16px;
   line-height: 20px;
-  color: @base-white;
-  background-color: @base-green;
+  color: @text-content-light;
+  background-color: @brand-color;
+  background-image: url("../../img/decor-images/cat-case.jpg");
   text-align: center;
+  min-height: 290px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+  }
+}
+
+.products-addition__content-container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 81px;
+  }
+}
+
+.product-addition__info {
+
+}
+
+.products-addition__item {
+
+}
+
+.products-addition__list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+
+  }
 }

@@ -1,4 +1,56 @@
 .hero {
   font-family: @font-oswald;
-  color: @base-white;
+  color: @text-content-light;
+  background-image: url("../img/decor-images/cat-hero.jpg"), linear-gradient(to bottom, @brand-color 303px, @background-basic 303px);
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-align: center;
+  padding: 27px 0 20px 0;
+
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    background-color: none;
+    background-image: none;
+    padding-top: 65px;
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/decor-images/background-cat-hero.jpg"), linear-gradient(90deg, transparent 50%, @brand-color 50%);
+    background-repeat: no-repeat;
+    background-position-x: calc(50% + 360px), 50%;
+    padding-top: 191px;
+    padding-bottom: 184px;
+    margin-top: -81px;
+  }
 }
+
+.hero__container {
+  position: relative;
+}
+
+.hero__image {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 201px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -81px;
+    left: 487px;
+    z-index: 1;
+  }
+}
+
+.hero__button {
+   @media (min-width: @tablet-width) {
+    margin-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
+}
+

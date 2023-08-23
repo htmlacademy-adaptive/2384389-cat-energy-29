@@ -1,7 +1,173 @@
+.about__content {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    padding-right: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    padding-right: 0;
+  }
+}
+
 .about__title {
   font-family: @font-oswald;
   font-size: 36px;
   line-height: 40px;
-  color: @base-black;
+  color: @title-basic;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
+
+.about__list {
+  display: grid;
+  gap: 24px;
+  grid-template-rows: repeat(4, min(60px));
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 137px;
+    row-gap: 37px;
+    align-items: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 324px 324px 324px 249px;
+    grid-template-rows: min-content;
+    gap:
+    0;
+  }
+}
+
+.about__item {
+  padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 151px 26px 57px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 151px 105px 57px 0;
+  }
+}
+
+.about__item:nth-child(4n+4) {
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.about__item__info {
+  margin: 0;
+}
+
+.about__item--compound::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-leaf.svg");
+  background-color: @brand-color;
+  background-size: 30px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
+}
+
+.about__item--cooking::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-powder.svg");
+  background-color: @brand-color;
+  background-size: 26px 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
+}
+
+.about__item--application::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-eat.svg");
+  background-color: @brand-color;
+  background-size: 25px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
+}
+
+.about__item--result::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/decor-images/icon-time.svg");
+  background-color: @brand-color;
+  background-size: 26px 31px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    background-size: 26px 31px;
+    top: 40px;
+    transform: translate(0, 0);
+  }
+}
+

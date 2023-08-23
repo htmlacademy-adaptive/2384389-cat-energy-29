@@ -2,11 +2,38 @@
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 20px;
-  color: @base-black;
+  color: @title-basic;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+   }
 }
 
 .location__address {
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+   }
+}
+
+.location__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+   grid-template-columns: 25% 25%;
+   gap: 50%;
+  }
+}
+
+.location__map {
+  width: 100%;
+  display: block;
+  text-align: center;
 }

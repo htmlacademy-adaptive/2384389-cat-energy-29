@@ -1,28 +1,109 @@
 .main-container__title {
-  color: @base-black;
+  color: @title-basic;
   font-family: @font-oswald;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0;
+  padding: 27px 20px 41px;
+  border-top: solid 1px #d9d9d9;
+  //min-width: 320px;
+
+ @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 67px 30px 84px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 40px 84px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
 
 .main-container__title--hero {
-  color: @base-white;
-  text-align: center;
-  background-color: @base-green;
+  color: @text-content-light;
+  padding: 0;
+  padding-bottom: 25px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    color: @title-basic;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 0 200px 40px 90px;
+    box-sizing: content-box;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 716px 40px 80px;
+  }
+}
+
+.main-container__title--form {
+  padding: 27px 20px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 67px 30px 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 40px 55px;
+  }
 }
 
 .main-container__intro {
   font-family: @font-oswald;
   font-size: 14px;
   line-height: 18px;
-  color: @base-black;
+  color: @title-basic;
   text-transform: uppercase;
+  //min-width: 320px;
+  //padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    //padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //padding: 0 40px;
+    max-width: 1300px;
+  }
 }
 
 .main-container__intro--hero {
+  font-size: 14px;
   line-height: 14px;
-  text-align: center;
-  color: @base-white;
-  background-color: @base-green;
+  color: @text-content-light;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    color: @title-basic;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0  90px 50px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
+
+.main-container__intro--form {
+  padding: 0px 20px 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0px 30px 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0px 40px 66px;
+  }
+}
+

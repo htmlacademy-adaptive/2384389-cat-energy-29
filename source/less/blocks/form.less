@@ -1,5 +1,7 @@
 .form__fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__label {
@@ -9,12 +11,20 @@
   text-transform: uppercase;
 }
 
+.form__label--text {
+  padding-right: 13px;
+}
+
+.form__control {
+  flex-grow: 1;
+}
+
 .form__title {
   font-family: @font-oswald;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
-  color: @base-black;
+  color: @title-basic;
 }
 
 .form__button {
@@ -28,7 +38,7 @@
 
 .form__info {
   line-height: 16px;
-  color: @base-black;
+  color: @title-basic;
 }
 
 .form__control {
@@ -36,5 +46,74 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: @special-dark-grey;
+  color: @text-content;
+}
+
+.form__container {
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.form__fieldset--border {
+  border-bottom: solid 1px #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.form__fieldset-container {
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 0 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.form__addition-container {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 123px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 325px 325px 325px 245px;
+    gap: 0;
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.form__row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.form__row:last-child {
+  padding-bottom: 24px;
 }
