@@ -10,17 +10,21 @@
     <header class="main-header">
       <div class="main-header__container">
         <a class="main-header__logo logo">
-          <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33px" height="38px" alt="Логотип Кэт энерджи.">
-          <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101px" height="18px" alt="Логотип Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/content-images/logo-desktop.svg 1x, img/content-images/logo-desktop@2x.svg 2x" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/content-images/logo-tablet.svg 1x, img/content-images/logo-tablet@2x.svg 2x" width="174" height="50">
+            <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
+          </picture>
+          <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
         </a>
 
-        <button class="main-header__navigation-toggle" type="button">
-          <span class="main-header__navigation-toggle__line"></span>
+        <button class="main-header__navigation-toggle main-header__navigation-toggle--closed" type="button">
+          <span class="main-header__navigation-toggle__line main-header__navigation-toggle__line"></span>
           <span class="visually-hidden">Меню.</span>
         </button>
       </div>
 
-      <nav class="main-header__navigation navigation">
+      <nav class="main-header__navigation navigation navigation--closed">
        <ul class="navigation-list list">
           <li class="navigation-list__item">
             <a class="navigation-list__link" href="index.html">Главная</a>
@@ -75,35 +79,42 @@
 
 
           <fieldset class="form__fieldset form__fieldset--border">
-            <div class="form__container">
-              <h3 class="visually-hidden">
-                Цель программы.
-              </h3>
+            <div class="form__container form__container--radio">
+              <div class="form__fieldset--radio-border">
+                <h3 class="visually-hidden">
+                  Цель программы.
+                </h3>
 
-              <div class="form__row form__row--radio">
-                <input class="visually-hidden" type="radio" name="target" value="weight-loss" checked>
-                <span class="form__label form__label--radio ">Похудение</span>
-              </div>
+                <label class="form__row form__row--radio">
+                  <input class="visually-hidden form__radio-input" type="radio" name="target" value="weight-loss" checked>
+                  <span class="form__radio-marker"></span>
+                  <span class="form__label form__label--radio ">Похудение</span>
+                </label>
 
-              <div class="form__row form__row--radio">
-                <input class="visually-hidden" type="radio" name="target" value="weight-gain">
-                <span class="form__label form__label--radio">Набор массы</span>
-              </div>
+                <label class="form__row form__row--radio">
+                  <input class="visually-hidden form__radio-input" type="radio" name="target" value="weight-gain">
+                  <span class="form__radio-marker"></span>
+                  <span class="form__label form__label--radio">Набор массы</span>
+                </label>
 
-              <div class="form__row form__row--radio">
-                <input class="visually-hidden" type="radio" name="target" value="need-advice">
-                <span class="form__label form__label--radio">Не знаю (нужен ваш совет)</span>
+                <label class="form__row form__row--radio">
+                  <input class="visually-hidden form__radio-input" type="radio" name="target" value="need-advice">
+                  <span class="form__radio-marker"></span>
+                  <span class="form__label form__label--radio">Не знаю (нужен ваш совет)</span>
+                </label>
               </div>
             </div>
           </fieldset>
         </div>
 
-        <fieldset class="form__fieldset">
-          <h3 class="form__title container">
-            Контактные данные (владельца кота)
-          </h3>
-          <div class="container form__fieldset-container">
-            <div class="form__row">
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <div class="container container--form-title">
+            <h3 class="form__title">
+              Контактные данные (владельца кота)
+            </h3>
+          </div>
+          <div class="form__fieldset-container form__fieldset-container--contacts">
+            <div class="form__row form__row--contact">
               <label class="form__label form__label--text" for="email-input">
                 E-mail:*
               </label>
@@ -111,7 +122,7 @@
               <span class="form__icon form__icon--email"></span>
             </div>
 
-            <div class="form__row">
+            <div class="form__row form__row--contact">
               <label class="form__label form__label--text" for="phone-input">
                 Телефон:*
               </label>
@@ -121,11 +132,13 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
-          <h3 class="form__title container">
-            Комментарий
-          </h3>
-          <div class="container">
+        <fieldset class="form__fieldset form__fieldset--comment">
+          <div class="container container--form-title">
+            <h3 class="form__title">
+              Комментарий
+            </h3>
+          </div>
+          <div class="form__container-comment">
             <label class="form__label form__label--textarea">
               <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота">
               </textarea>
@@ -133,34 +146,40 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
-          <h3 class="form__title container">
-            Дополнительно
-          </h3>
-          <div class="container form__addition-container">
-            <div class="form__row form__row--checkbox">
-              <input class="visually-hidden" type="checkbox" checked name="addition" value="sweetener">
+        <fieldset class="form__fieldset form__fieldset--addition">
+          <div class="container container--form-title">
+            <h3 class="form__title form__title--addition">
+              Дополнительно
+            </h3>
+          </div>
+          <div class="container container--form form__addition-container">
+            <label class="form__row form__row--checkbox">
+              <input class="visually-hidden form__checkbox-input" type="checkbox" checked name="addition" value="sweetener">
+              <span class="form__checkbox-marker"></span>
               <span class="form__label form__label--checkbox">Сахарозаменитель</span>
-            </div>
+            </label>
 
-            <div class="form__row form__row--checkbox">
-              <input class="visually-hidden" type="checkbox" name="addition" value="water">
-              <span class="form__label form__label--scheckbox">Питьевая вода</span>
-            </div>
+            <label class="form__row form__row--checkbox">
+              <input class="visually-hidden form__checkbox-input" type="checkbox" name="addition" value="water">
+              <span class="form__checkbox-marker"></span>
+              <span class="form__label form__label--checkbox">Питьевая вода</span>
+            </label>
 
-            <div class="form__row form__row--checkbox">
-              <input class="visually-hidden" type="checkbox" name="addition" value="milk">
+            <label class="form__row form__row--checkbox">
+              <input class="visually-hidden form__checkbox-input" type="checkbox" name="addition" value="milk">
+              <span class="form__checkbox-marker"></span>
               <span class="form__label form__label--checkbox">Молоко</span>
-            </div>
+            </label>
 
-            <div class="form__row form__row--checkbox">
-              <input class="visually-hidden" type="checkbox" name="addition" value="vitamins">
+            <label class="form__row form__row--checkbox">
+              <input class="visually-hidden form__checkbox-input" type="checkbox" name="addition" value="vitamins">
+              <span class="form__checkbox-marker"></span>
               <span class="form__label form__label--checkbox">Витамины</span>
-            </div>
+            </label>
           </div>
         </fieldset>
 
-        <div class="form__footer container">
+        <div class="form__footer">
           <button class="form__button button" type="submit">
             Отправить заявку
           </button>
@@ -173,20 +192,24 @@
 
     <footer class="main-footer">
       <section class="main-footer__location location">
-        <div class="location__info container">
-          <h2 class="visually-hidden">
-            Адрес офиса продаж.
-          </h2>
-          <p class="location__diller">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <address class="location__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </address>
+        <div class="location__info-container container">
+          <div class="location__info">
+            <h2 class="visually-hidden">
+              Адрес офиса продаж.
+            </h2>
+            <p class="location__diller">
+              Приглашаем к сотрудничеству дилеров!
+            </p>
+            <address class="location__address">
+              ул. Большая Конюшенная, д. 19/8 <span class="location__city">Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
-        <a class="location__map" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323036%2C59.938631&z=16.71">
-          <img class="location__map-image" src="img/content-images/location.jpg" height="362px" width="320px" alt="Расположение офиса на карте.">
-        </a>
+        <p class="visually-hidden">Расположение офиса на карте</p>
+        <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197886!2d30.320472476878738!3d59.93871916209405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693394150968!5m2!1sru!2sru"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="офис компании по адресу: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург.">
+        </iframe>
       </section>
 
       <div class="main-footer__info-link info-link">
@@ -243,5 +266,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

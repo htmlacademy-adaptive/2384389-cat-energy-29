@@ -5,7 +5,7 @@
   @media (min-width: @tablet-width) {
     padding-top: 45px;
     padding-bottom: 47px;
-    padding-right: 105px;
+    padding-right: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +42,7 @@
     column-gap: 137px;
     row-gap: 37px;
     align-items: start;
+    counter-reset: item;
   }
 
   @media (min-width: @desktop-width) {
@@ -60,11 +61,50 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding: 151px 26px 57px 0;
+    padding: 151px 0 57px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     padding: 151px 105px 57px 0;
+  }
+}
+
+.about__item::after {
+  @media (min-width: @tablet-width) {
+    counter-increment: item;
+	  content: counter(item);
+    font-family: @font-oswald;
+    font-size: 280px;
+    line-height: 280px;
+    color: @button-special-color;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 113px;
+  }
+}
+
+.about__item:first-child::after {
+  @media (min-width: @tablet-width) {
+    counter-increment: item;
+	  content: counter(item);
+    font-family: @font-oswald;
+    font-size: 280px;
+    line-height: 280px;
+    color: @button-special-color;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 118px;
   }
 }
 
@@ -78,7 +118,7 @@
   margin: 0;
 }
 
-.about__item--compound::after {
+.about__item--compound::before {
   content: "";
   display: block;
   position: absolute;
@@ -101,7 +141,7 @@
   }
 }
 
-.about__item--cooking::after {
+.about__item--cooking::before {
   content: "";
   display: block;
   position: absolute;
@@ -124,7 +164,7 @@
   }
 }
 
-.about__item--application::after {
+.about__item--application::before {
   content: "";
   display: block;
   position: absolute;
@@ -147,7 +187,7 @@
   }
 }
 
-.about__item--result::after {
+.about__item--result::before {
   content: "";
   display: block;
   position: absolute;

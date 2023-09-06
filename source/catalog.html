@@ -10,20 +10,24 @@
     <header class="main-header">
       <div class="main-header__container">
         <a class="main-header__logo logo">
-          <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33px" height="38px" alt="Логотип Кэт энерджи.">
-          <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101px" height="18px" alt="Логотип Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/content-images/logo-desktop.svg 1x, img/content-images/logo-desktop@2x.svg 2x" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/content-images/logo-tablet.svg 1x, img/content-images/logo-tablet@2x.svg 2x" width="174" height="50">
+            <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
+          </picture>
+          <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
         </a>
 
-        <button class="main-header__navigation-toggle" type="button">
-          <span class="main-header__navigation-toggle__line"></span>
+        <button class="main-header__navigation-toggle main-header__navigation-toggle--closed" type="button">
+          <span class="main-header__navigation-toggle__line main-header__navigation-toggle__line"></span>
           <span class="visually-hidden">Меню.</span>
         </button>
       </div>
 
-      <nav class="main-header__navigation navigation">
+      <nav class="main-header__navigation navigation navigation--closed">
        <ul class="navigation-list list">
           <li class="navigation-list__item">
-            <a class="navigation-list__link" href="index.html">Главная</a>
+            <a class="navigation-list__link  navigation-list__link" href="index.html">Главная</a>
           </li>
           <li class="navigation-list__item">
             <a class="navigation-list__link navigation-list__link--current">Каталог продукции</a>
@@ -47,7 +51,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/mini-chicken-catalog.png" width="140" height="107" alt="Кэт энерджи с курицей 500 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/mini-chicken-catalog-desktop.png 1x, img/content-images/mini-chicken-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/mini-chicken-catalog-tablet.png 1x, img/content-images/mini-chicken-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/mini-chicken-catalog-mobile.png" srcset="img/content-images/mini-chicken-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с курицей 500 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -55,20 +63,20 @@
                     Cat energy pro 500 г
                   </h3>
                 </a>
-                <table class="catalog-card__info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Курица</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>700 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">500 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Курица</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">700 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -79,7 +87,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/max-chicken-catalog.png" width="140" height="107" alt="Кэт энерджи с курицей 1000 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/max-chicken-catalog-desktop.png 1x, img/content-images/max-chicken-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/max-chicken-catalog-tablet.png 1x, img/content-images/max-chicken-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/max-chicken-catalog-mobile.png" srcset="img/content-images/max-chicken-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с курицей 1000 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -87,20 +99,20 @@
                     Cat energy pro 1000 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Курица</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>1000 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">1000 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Курица</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">1000 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -111,7 +123,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/mini-fish-catalog.png" width="140" height="107" alt="Кэт энерджи с рыбой 500 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/mini-fish-catalog-desktop.png 1x, img/content-images/mini-fish-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/mini-fish-catalog-tablet.png 1x, img/content-images/mini-fish-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/mini-fish-catalog-mobile.png" srcset="img/content-images/mini-fish-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с рыбой 500 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -119,20 +135,20 @@
                     Cat energy pro 500 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Рыба</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>700 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">500 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Рыба</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">700 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -143,7 +159,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/max-fish-catalog.png" width="140" height="107" alt="Кэт энерджи с рыбой 1000 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/max-fish-catalog-desktop.png 1x, img/content-images/max-fish-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/max-fish-catalog-tablet.png 1x, img/content-images/max-fish-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/max-fish-catalog-mobile.png" srcset="img/content-images/max-fish-catalog-mobile@2x.png 2x"width="140" height="107" alt="Кэт энерджи с рыбой 1000 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -151,20 +171,20 @@
                     Cat energy pro 1000 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Рыба</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>1000 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">1000 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Рыба</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">1000 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -175,7 +195,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/mini-buckwheat-catalog.png" width="140" height="107" alt="Кэт энерджи с гречкой 500 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/mini-buckwheat-catalog-desktop.png 1x, img/content-images/mini-buckwheat-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/mini-buckwheat-catalog-tablet.png 1x, img/content-images/mini-buckwheat-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/mini-buckwheat-catalog-mobile.png" srcset="img/content-images/mini-buckwheat-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с гречкой 500 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -183,20 +207,20 @@
                     Cat energy pro 500 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Гречка</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>400 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">500 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Гречка</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">400 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -207,7 +231,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/max-buckwheat-catalog.png" width="140" height="107" alt="Кэт энерджи с гречкой 1000 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/max-buckwheat-catalog-desktop.png 1x, img/content-images/max-buckwheat-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/max-buckwheat-catalog-tablet.png 1x, img/content-images/max-buckwheat-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/max-buckwheat-catalog-mobile.png" srcset="img/content-images/max-buckwheat-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с гречкой 1000 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -215,20 +243,20 @@
                     Cat energy pro 1000 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>1000 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Гречка</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>700 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">1000 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Гречка</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">700 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                   Заказать
@@ -239,7 +267,11 @@
           <li class="catalog-container__item">
             <div class="catalog-card">
               <a class="catalog-card__link" href="#">
-                <img class="catalog-card__photo" src="img/content-images/mini-rice-catalog.png" width="140" height="107" alt="Кэт энерджи с рисом 500 грамм.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/content-images/mini-rice-catalog-desktop.png 1x, img/content-images/mini-rice-catalog-desktop@2x.png 2x" width="169" height="210">
+                  <source media="(min-width: 768px)" srcset="img/content-images/mini-rice-catalog-tablet.png 1x, img/content-images/mini-rice-catalog-tablet@2x.png 2x" width="200" height="210">
+                  <img class="catalog-card__photo" src="img/content-images/mini-rice-catalog-mobile.png" srcset="img/content-images/mini-rice-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с рисом 500 грамм.">
+                </picture>
               </a>
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
@@ -247,20 +279,20 @@
                     Cat energy pro 500 г
                   </h3>
                 </a>
-                <table class="catalog-card__info card-info">
-                  <tr class="catalog-card__info-item">
-                    <td>Масса</td>
-                    <td>500 г</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Вкус</td>
-                    <td>Рис</td>
-                  </tr>
-                  <tr class="catalog-card__info-item">
-                    <td>Цена</td>
-                    <td>500 ₽</td>
-                  </tr>
-                </table>
+                <div class="catalog-card__info">
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Масса</span>
+                    <span class="catalog-card__item-data">500 г</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Вкус</span>
+                    <span class="catalog-card__item-data">Рис</span>
+                  </div>
+                  <div class="catalog-card__info-container">
+                    <span class="catalog-card__item">Цена</span>
+                    <span class="catalog-card__item-data">500 ₽</span>
+                  </div>
+                </div>
               </div>
               <a class="catalog-card__button button" href="#">
                 Заказать
@@ -298,12 +330,14 @@
                 <h3 class="product-addition__name">
                   Сахарозаменитель
                 </h3>
-                <span class="product-addition__name-info">
-                  1 упаковка (100 г)
-                </span>
-                <span class="product-addition__name-info">
-                  200 ₽
-                </span>
+                <div class="product-addition__item-container">
+                  <span class="product-addition__name-info">
+                    1 упаковка (100 г)
+                  </span>
+                  <span class="product-addition__name-info">
+                    200 ₽
+                  </span>
+                </div>
               </div>
               <a class="product-addition__button button" href="#">
                 Заказать
@@ -315,12 +349,14 @@
                 <h3 class="product-addition__name">
                   Питьевая вода
                 </h3>
-                <span class="product-addition__name-info">
-                  5 литров
-                </span>
-                <span class="product-addition__name-info">
-                  50 ₽
-                </span>
+                <div class="product-addition__item-container">
+                  <span class="product-addition__name-info">
+                    5 литров
+                  </span>
+                  <span class="product-addition__name-info">
+                    50 ₽
+                  </span>
+                </div>
               </div>
               <a class="product-addition__button button" href="#">
                 Заказать
@@ -332,12 +368,14 @@
                 <h3 class="product-addition__name">
                   Молоко
                 </h3>
-                <span class="product-addition__name-info">
-                  1 литр
-                </span>
-                <span class="product-addition__name-info">
-                  100 ₽
-                </span>
+                <div class="product-addition__item-container">
+                  <span class="product-addition__name-info">
+                    1 литр
+                  </span>
+                  <span class="product-addition__name-info">
+                    100 ₽
+                  </span>
+                </div>
               </div>
               <a class="product-addition__button button" href="#">
                 Заказать
@@ -349,12 +387,14 @@
                 <h3 class="product-addition__name">
                   Витамины
                 </h3>
-                <span class="product-addition__name-info">
-                  1 упаковка (30 г)
-                </span>
-                <span class="product-addition__name-info">
-                  300 ₽
-                </span>
+                <div class="product-addition__item-container">
+                  <span class="product-addition__name-info">
+                    1 упаковка (30 г)
+                  </span>
+                  <span class="product-addition__name-info">
+                    300 ₽
+                  </span>
+                </div>
               </div>
               <a class="product-addition__button button" href="#">
                 Заказать
@@ -373,20 +413,24 @@
 
     <footer class="main-footer">
       <section class="main-footer__location location">
-        <div class="location__info container">
-          <h2 class="visually-hidden">
-            Адрес офиса продаж.
-          </h2>
-          <p class="location__diller">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <address class="location__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </address>
+        <div class="location__info-container container">
+          <div class="location__info">
+            <h2 class="visually-hidden">
+              Адрес офиса продаж.
+            </h2>
+            <p class="location__diller">
+              Приглашаем к сотрудничеству дилеров!
+            </p>
+            <address class="location__address">
+              ул. Большая Конюшенная, д. 19/8 <span class="location__city">Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
-        <a class="location__map" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323036%2C59.938631&z=16.71">
-          <img class="location__map-image" src="img/content-images/location.jpg" height="362px" width="320px" alt="Расположение офиса на карте.">
-        </a>
+        <p class="visually-hidden">Расположение офиса на карте</p>
+        <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197886!2d30.320472476878738!3d59.93871916209405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693394150968!5m2!1sru!2sru"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="офис компании по адресу: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург.">
+        </iframe>
       </section>
 
       <div class="main-footer__info-link info-link">
@@ -443,5 +487,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

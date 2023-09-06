@@ -4,6 +4,17 @@
   line-height: 24px;
   font-weight: 400;
   color: @title-basic;
+  margin: 0;
+  padding: 25px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    margin-bottom: 80px;
+    display: inline-block;
+    background-color: @background-basic;
+  }
 }
 
 .product-addition__name {
@@ -13,6 +24,13 @@
   font-weight: 400;
   color: @product-name;
   text-transform: uppercase;
+  margin: 0 0 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 25px;
@@ -22,6 +40,16 @@
 
 .product-addition__name-info {
   line-height: 14px;
+  font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+  }
 }
 
 .product-addition__button {
@@ -43,13 +71,42 @@
   line-height: 20px;
   color: @text-content-light;
   background-color: @brand-color;
-  background-image: url("../../img/decor-images/cat-case.jpg");
+  background-image: url("../img/decor-images/icon-gift.svg"), url("../../img/decor-images/cat-case-mobile.jpg");
+  background-position: center 59px, center;
   text-align: center;
   min-height: 290px;
   background-repeat: no-repeat;
+  margin-top: 35px;
+  padding: 187px 55px 43px;
+  background-size: auto, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/decor-images/icon-gift.svg"), url("../../img/decor-images/cat-case-mobile@2x.jpg");
+    background-size: auto, cover;
+  }
+
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
+    background-image: url("../img/decor-images/icon-gift.svg"), url("../../img/decor-images/cat-case-tablet.jpg");
+    background-position: 77px center, center;
+    padding: 71px 120px 20px 421px;
+    text-align: start;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decor-images/icon-gift.svg"), url("../../img/decor-images/cat-case-tablet@2x.jpg");
+      background-size: auto, cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0px;
+    padding: 185px 40px 43px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decor-images/icon-gift.svg"), url("../../img/decor-images/cat-case-desktop@2x.jpg");
+      background-size: auto, cover;
+    }
   }
 }
 
@@ -62,16 +119,102 @@
 }
 
 .product-addition__info {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
 
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 325px 285px;
+  }
 }
 
 .products-addition__item {
+  padding: 13px 0 19px;
+  border-top: solid 1px #cdcdcd;
 
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.products-addition__item:last-child {
+  padding: 13px 0 19px;
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .products-addition__list {
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    border-left: solid 1px #cdcdcd;
+    border-right: solid 1px #cdcdcd;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    display: block;
+  }
+}
+
+.product-addition__item-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    gap: 49px;
+    margin: 0;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
+    grid-template-columns: 243px 82px;
+    gap: 0;
 
+
+  }
+}
+
+.products-addition {
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.products-addition::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 266px);
+  height: 2px;
+  background-color: @brand-color;
+  top: 41px;
+  left: 266px;
+
+  @media (min-width: @tablet-width) {
+    top: 21px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
   }
 }

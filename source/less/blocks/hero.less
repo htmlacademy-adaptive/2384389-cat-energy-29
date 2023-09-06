@@ -1,11 +1,20 @@
 .hero {
   font-family: @font-oswald;
   color: @text-content-light;
-  background-image: url("../img/decor-images/cat-hero.jpg"), linear-gradient(to bottom, @brand-color 303px, @background-basic 303px);
+  background-image: url("../img/decor-images/cat-hero-index-mobile.jpg"), linear-gradient(to bottom, @brand-color 303px, @background-basic 303px);
   background-repeat: no-repeat;
   background-position: top center;
   text-align: center;
   padding: 27px 0 20px 0;
+  background-size: 320px auto, 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/decor-images/cat-hero-index-mobile@2x.jpg"), linear-gradient(to bottom, @brand-color 303px, @background-basic 303px);
+    background-size: 320px auto, 100%;
+  }
+
+
+
 
 
   @media (min-width: @tablet-width) {
@@ -14,33 +23,49 @@
     background-image: none;
     padding-top: 65px;
     padding-bottom: 526px;
+
+
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/decor-images/background-cat-hero.jpg"), linear-gradient(90deg, transparent 50%, @brand-color 50%);
+    background-image: url("../img/decor-images/cat-hero-index-desktop.jpg"), linear-gradient(90deg, transparent 50%, @brand-color 50%);
     background-repeat: no-repeat;
     background-position-x: calc(50% + 360px), 50%;
     padding-top: 191px;
     padding-bottom: 184px;
     margin-top: -81px;
+    background-size: 720px auto, 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decor-images/cat-hero-index-desktop@2x.jpg"), linear-gradient(90deg, transparent 50%, @brand-color 50%);
+      background-size: 720px auto, 100%;
+    }
   }
 }
+
 
 .hero__container {
   position: relative;
 }
 
 .hero__image {
+  width: 280px;
+  height: 270px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 201px;
     z-index: -1;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
     top: -81px;
     left: 487px;
     z-index: 1;
+    width: 552px;
+    height: 499px;
   }
 }
 
