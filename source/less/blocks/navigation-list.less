@@ -34,8 +34,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-
- }
+  }
 }
 
 .navigation-list__item {
@@ -45,4 +44,14 @@
     padding-left: 33px;
     border: none;
  }
+}
+
+.navigation-list__link--current {
+  border-bottom: solid 2px @brand-color;
+}
+
+.navigation-list__link--current-index {
+  @media (min-width: @desktop-width) {
+    border-bottom: solid 2px @background-basic;
+   }
 }
