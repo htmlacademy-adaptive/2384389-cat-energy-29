@@ -23,6 +23,14 @@
  }
 }
 
+.navigation-list__link:hover {
+  opacity: 0.6;
+}
+
+.navigation-list__link:active {
+  opacity: 0.3;
+}
+
 .navigation-list__link--index {
  @media (min-width: @desktop-width) {
   color: @text-content-light;
@@ -47,7 +55,9 @@
 }
 
 .navigation-list__link--current {
-  border-bottom: solid 2px @brand-color;
+  @media (min-width: @tablet-width) {
+    border-bottom: solid 2px @brand-color;
+  }
 }
 
 .navigation-list__link--current-index {

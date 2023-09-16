@@ -129,7 +129,22 @@
     line-height: normal;
     height: 52px;
   }
+
+
+  &:hover {
+    border: solid 1px #cdcdcd;
+  }
+
+  &:focus {
+    outline: 0;
+    border: solid 1px #444444;
+    box-shadow: 0 0 0 1px #444444;
+  }
+
+
 }
+
+
 
 .form__container {
   min-width: 320px;
@@ -258,6 +273,18 @@
     width: 40px;
   height: 40px;
   }
+
+  &:hover {
+    border: solid 1px #bababa;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.form__radio-marker:disabled + .form__label--radio {
+  opacity: 0.3;
 }
 
 .form__radio-input[type="radio"]:checked + .form__radio-marker::before {
@@ -353,7 +380,20 @@
     width: 40px;
     height: 40px;
   }
+
+  &:hover {
+    border: solid 1px #bababa;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
+
+.form__checkbox-marker:disabled + .form__label--radio {
+  opacity: 0.3;
+}
+
 
 .form__checkbox-input[type="checkbox"]:checked + .form__checkbox-marker::before {
   content: "";
@@ -363,9 +403,14 @@
   width: 26px;
   height: 26px;
   background-position: center;
+  background-size: 26px 26px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: @tablet-width) {
+    background-size: 29px 29px;
+  }
 }
 
 .form__label--checkbox {
@@ -452,6 +497,8 @@
 }
 
 .form__row--contact {
+  position: relative;
+
   @media (min-width: @desktop-width) {
     padding: 0;
   }
@@ -466,4 +513,25 @@
   @media (min-width: @desktop-width) {
     padding: 0;
   }
+}
+
+.form__control--contacts {
+  padding-right: 45px;
+  position: relative;
+}
+
+.form__icon {
+  position: absolute;
+  top: 13x;
+  right: 12px;
+  stroke: #000000;
+
+  @media (min-width: @tablet-width) {
+    top: 16x;
+    right: 14px;
+  }
+}
+
+.form__control:focus + .form__icon {
+  stroke: @brand-color;
 }

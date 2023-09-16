@@ -119,9 +119,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @title-basic;
-  padding: 19px 56px 22px 0;
+  padding: 19px 47px 22px 0;
   display: inline-block;
-  margin-top: auto;
+  //margin-top: auto;
+  width: fit-content;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -131,9 +133,39 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 60px;
+    padding-right: 57px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
+
+.program__catalog-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 10px;
+  top: 22px;
+  right: 8px;
+  background-image: url("../../img/decor-images/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+  }
+}
+
+.program__catalog-link:hover::after
+ {
+  width: 32px;
+  right: 0;
+ transition: 0.2s;
+}
+
+
 
 .program {
   background-color: @highlight-background;
