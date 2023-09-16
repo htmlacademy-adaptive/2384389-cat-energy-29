@@ -5,6 +5,19 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+
+import htmlmin from 'gulp-htmlmin';
+
+//HTML
+
+export const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'));
+  }
+
 // Styles
 
 export const styles = () => {
@@ -41,5 +54,10 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  html, styles, server, watcher
 );
+
+
+
+
+
