@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico"><!--32x32-->
   </head>
   <body class="page__body">
     <div class="main-header__background-container">
@@ -19,13 +20,13 @@
             <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
           </a>
 
-          <button class="main-header__navigation-toggle main-header__navigation-toggle--closed" type="button">
+          <button class="main-header__navigation-toggle main-header__navigation-toggle--nojs main-header__navigation-toggle--closed" type="button">
             <span class="main-header__navigation-toggle__line main-header__navigation-toggle__line"></span>
             <span class="visually-hidden">Меню.</span>
           </button>
         </div>
 
-        <nav class="main-header__navigation navigation navigation--closed">
+        <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
          <ul class="navigation-list list">
             <li class="navigation-list__item">
               <a class="navigation-list__link navigation-list__link--index navigation-list__link--current navigation-list__link--current-index">Главная</a>
@@ -152,7 +153,7 @@
               <button class="sample-slider__button" type="button">
                 <span class="visually-hidden">Сравнить кота до и после программы.</span>
                 <svg class="sample-slider__button-icon" width="24" height="18">
-                  <use href="img/sprite.svg#slider-button"></use>
+                  <use href="img/sprite.svg#slide-button"></use>
                 </svg>
               </button>
               <div class="sample-slider__before">
@@ -166,7 +167,7 @@
                 <picture>
                   <source media="(min-width: 1300px)" srcset="img/content-images/after-cat-tablet.png 1x, img/content-images/after-cat-tablet@2x.png 2x" width="560" height="512">
                   <source media="(min-width: 768px)" srcset="img/content-images/after-cat-tablet.png 1x, img/content-images/after-cat-tablet@2x.png 2x" width="560" height="512">
-                  <img class="sample-slider__photo" src="img/content-images/arter-cat-mobile.png" srcset="img/content-images/after-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения.">
+                  <img class="sample-slider__photo" src="img/content-images/after-cat-mobile.png" srcset="img/content-images/after-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения.">
                 </picture>
               </div>
             </div>
@@ -201,7 +202,7 @@
         <div class="info-link__container container">
           <a class="info-link__logo logo__text" href="#">
             <svg class="info-link__cat-logo" width="128" height="24">
-              <use href="img/sprite.svg#logo-cat"></use>
+              <use href="img/sprite.svg#logo-cat-footer"></use>
             </svg>
             <span class="visually-hidden">Логотип Кэт энерджи.</span>
           </a>
@@ -210,7 +211,7 @@
             <li class="social__item">
               <a class="social__link"  href="#">
                 <svg class="social__logo" width="28" height="22">
-                  <use href="img/sprite.svg#vk"></use>
+                  <use href="img/sprite.svg#vkontakte"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте.</span>
               </a>
@@ -234,15 +235,15 @@
           </ul>
 
           <div class="copyright-container">
-            <a class="copyright-container__logo copyright" href="#">
+            <a class="copyright-container__logo" href="#">
               <svg class="copyright__logo__text" width="113" height="20">
-                <use href="img/sprite.svg#copyright-logo"></use>
+                <use href="img/sprite.svg#html-text"></use>
               </svg>
               <span class="visually-hidden">HTML Academy.</span>
             </a>
-            <a class="copyright-container__logo copyright" href="#">
+            <a class="copyright-container__logo copyright-container__logo--img" href="#">
               <svg class="copyright__logo__image" width="27" height="34">
-                <use href="img/sprite.svg#copyright-logo-image"></use>
+                <use href="img/sprite.svg#html-academy-img"></use>
               </svg>
               <span class="visually-hidden">HTML Academy.</span>
             </a>

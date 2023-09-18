@@ -17,18 +17,15 @@
   display: block;
   padding: 20px 12px;
   box-sizing: content-box;
+  color: #666666;
 }
 
-.social__link .social__logo {
-  fill: #666666;
+.social__link:hover {
+  color: @brand-color;
 }
 
-.social__link:hover .social__logo {
-  fill: @brand-color;
-}
-
-.social__link:active .social__logo {
-  fill: @brand-color;
+.social__link:active {
+  color: @brand-color;
   opacity: 0.3;
 }
 

@@ -16,28 +16,30 @@
   display: flex;
   align-items: center;
   box-sizing: content-box;
+  color: #666666;
 
   @media (min-width: @tablet-width) {
     padding-right: 23px;
   }
 
-  &:hover .copyright__logo__image {
-    fill: @brand-color;
+  &--img:hover {
+    color: @brand-color;
   }
 
-  &:active .copyright__logo__image {
-    fill: @brand-color;
+  &:active {
     opacity: 0.3;
   }
 
-  &:active .copyright__logo__text {
-    opacity: 0.3;
+  &--img:active {
+    color: @brand-color;
   }
 }
 
-.copyright-container__logo .copyright__logo__image,
-.copyright-container__logo .copyright__logo__text {
-  fill: #444444;
-}
+
+
+//.copyright-container__logo .copyright__logo__image,
+//.copyright-container__logo .copyright__logo__text {
+//  fill: #444444;
+//}
 
 

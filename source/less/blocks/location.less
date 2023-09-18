@@ -62,10 +62,32 @@
   text-align: center;
   height: 362px;
   border: none;
+  background-image: url("../../img/content-images/location-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/content-images/location-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     height: 400px;
-   }
+    background-image: url("../../img/content-images/location-tablet.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content-images/location-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/content-images/location-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content-images/location-desktop@2x.jpg");
+    }
+  }
 }
 
 .location__info-container {

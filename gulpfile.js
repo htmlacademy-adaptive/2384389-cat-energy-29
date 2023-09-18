@@ -69,12 +69,12 @@ webp: {}
 // SVG
 
 const svg = () =>
-gulp.src(['source/img/**/*.svg'])
+gulp.src(['source/img/**/*.svg', '!source/img/icon/*.svg'])
 .pipe(svgo())
 .pipe(gulp.dest('build/img'));
 
 export const sprite = () => {
-return gulp.src('source/img/*.svg')
+return gulp.src('source/img/icon/*.svg')
 .pipe(svgo())
 .pipe(svgstore({
 inlineSvg: true
@@ -170,4 +170,3 @@ export const build = gulp.series(
      server,
      watcher
  ));
-

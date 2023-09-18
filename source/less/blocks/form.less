@@ -98,6 +98,11 @@
   cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .form__info {
@@ -436,20 +441,40 @@
 .form__textarea {
   width: 100%;
   min-height: 150px;
+  padding: 14px;
   border: solid 1px #e7e7e7;
   margin-bottom: 23px;
-  //margin: 0 auto;
+  font-family: @font-oswald;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &:hover {
+    border: solid 1px #cdcdcd;
+  }
+
+  &:focus {
+    outline: 0;
+    border: solid 1px #444444;
+    box-shadow: 0 0 0 1px #444444;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 175px;
     margin-bottom: 65px;
+    padding: 11px 20px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 70px;
-    padding: 0 40px;
+    padding: 11px 20px;
     max-width: 1300px;
 
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: #444444;
   }
 }
 
