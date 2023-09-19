@@ -9,6 +9,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <div class="page__body-background">
@@ -30,7 +32,7 @@
         </div>
 
         <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
-         <ul class="navigation-list list">
+          <ul class="navigation-list list">
             <li class="navigation-list__item">
               <a class="navigation-list__link navigation-list__link--index navigation-list__link--current navigation-list__link--current-index">Главная</a>
             </li>
@@ -55,6 +57,9 @@
             Занялся собой? Займись котом!
           </p>
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/content-images/index-hero-desktop.webp 1x, img/content-images/index-hero-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content-images/index-hero-tablet.webp 1x, img/content-images/index-hero-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content-images/index-hero-mobile.webp 1x, img/content-images/index-hero-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/content-images/index-hero-desktop.png 1x, img/content-images/index-hero-desktop@2x.png 2x" width="552" height="499">
             <source media="(min-width: 768px)" srcset="img/content-images/index-hero-tablet.png 1x, img/content-images/index-hero-tablet@2x.png 2x" width="709" height="609">
             <img class="hero__image" src="img/content-images/index-hero-mobile.png" srcset="img/content-images/index-hero-mobile@2x.png 2x" width="280" height="270" alt="Упаковка питания для котов.">

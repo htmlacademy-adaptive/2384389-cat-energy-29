@@ -12,6 +12,7 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 import cheerio from 'gulp-cheerio';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -32,13 +33,15 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
+  .pipe(terser())
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
@@ -154,19 +157,19 @@ export const build = gulp.series(
 );
 
 //default
- export default gulp.series(
-   clean,
-   copy,
-   copyImages,
-   gulp.parallel(
-     styles,
-     html,
-     scripts,
-     svg,
-     sprite,
-     createWebp
- ),
+export default gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
   gulp.series(
-     server,
-     watcher
- ));
+    server,
+    watcher
+));
