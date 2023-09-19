@@ -7,10 +7,10 @@
   margin: 0;
   padding: 26px 15px 26px 0;
 
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
+    padding: 63px 15px 63px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,10 +26,13 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
-   }
+    padding: 62px 0px;
+    text-align: end;
+  }
 
    @media (min-width: @desktop-width) {
-    padding: 60px 40px 60px 0;
+    padding: 58px 40px 60px 0;
+    text-align: start;
   }
 }
 
@@ -38,15 +41,16 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
-
   @media (min-width: @tablet-width) {
-   grid-template-columns: 25% 25%;
-   gap: 50%;
+   display: flex;
+   gap: 220px;
    padding-left: 40px;
    padding-right: 40px;
+   justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
+    display: grid;
     position: absolute;
     gap: 87px;
     background-color: @background-basic;
@@ -62,10 +66,32 @@
   text-align: center;
   height: 362px;
   border: none;
+  background-image: url("../../img/content-images/location-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/content-images/location-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     height: 400px;
-   }
+    background-image: url("../../img/content-images/location-tablet.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content-images/location-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/content-images/location-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content-images/location-desktop@2x.jpg");
+    }
+  }
 }
 
 .location__info-container {
@@ -81,6 +107,11 @@
 }
 
 .location__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     display: block;
     padding-top: 19px;
