@@ -44,7 +44,14 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 475px;
+    justify-content: flex-end;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 550px;
+   }
 }
 
 .navigation-list__item {
