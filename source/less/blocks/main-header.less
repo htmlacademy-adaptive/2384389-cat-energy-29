@@ -65,6 +65,14 @@
   }
 }
 
+.main-header__header-container {
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
+  }
+}
+
 .main-header__navigation-toggle--closed .main-header__navigation-toggle__line {
   background-color: #000000;
   height: 2px;
@@ -119,6 +127,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: none;

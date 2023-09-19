@@ -6,42 +6,44 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-    <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__container">
-        <a class="main-header__logo logo">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/content-images/logo-desktop.svg 1x, img/content-images/logo-desktop@2x.svg 2x" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/content-images/logo-tablet.svg 1x, img/content-images/logo-tablet@2x.svg 2x" width="174" height="50">
-            <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
-          </picture>
-          <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
-        </a>
+    <div class="main-header__header-container">
+      <header class="main-header">
+        <div class="main-header__container">
+          <a class="main-header__logo logo">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/content-images/logo-desktop.svg 1x, img/content-images/logo-desktop@2x.svg 2x" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="img/content-images/logo-tablet.svg 1x, img/content-images/logo-tablet@2x.svg 2x" width="174" height="50">
+              <img class="main-header__logo-image" src="img/content-images/logo-cat-img.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
+            </picture>
+            <img class="main-header__logo-text logo__text" src="img/content-images/logo-cat-text.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
+          </a>
 
-        <button class="main-header__navigation-toggle main-header__navigation-toggle--nojs main-header__navigation-toggle--closed" type="button">
-          <span class="main-header__navigation-toggle__line main-header__navigation-toggle__line"></span>
-          <span class="visually-hidden">Меню.</span>
-        </button>
-      </div>
+          <button class="main-header__navigation-toggle main-header__navigation-toggle--nojs main-header__navigation-toggle--closed" type="button">
+            <span class="main-header__navigation-toggle__line main-header__navigation-toggle__line"></span>
+            <span class="visually-hidden">Меню.</span>
+          </button>
+        </div>
 
-      <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
-       <ul class="navigation-list list">
-          <li class="navigation-list__item">
-            <a class="navigation-list__link  navigation-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link navigation-list__link--current">Каталог продукции</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
+         <ul class="navigation-list list">
+            <li class="navigation-list__item">
+              <a class="navigation-list__link  navigation-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link navigation-list__link--current">Каталог продукции</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <main class="main-container">
       <h1 class="main-container__title main-container__title--index">
@@ -166,7 +168,7 @@
                 <picture>
                   <source media="(min-width: 1300px)" srcset="img/content-images/max-fish-catalog-desktop.png 1x, img/content-images/max-fish-catalog-desktop@2x.png 2x" width="169" height="210">
                   <source media="(min-width: 768px)" srcset="img/content-images/max-fish-catalog-tablet.png 1x, img/content-images/max-fish-catalog-tablet@2x.png 2x" width="200" height="210">
-                  <img class="catalog-card__photo" src="img/content-images/max-fish-catalog-mobile.png" srcset="img/content-images/max-fish-catalog-mobile@2x.png 2x"width="140" height="107" alt="Кэт энерджи с рыбой 1000 грамм.">
+                  <img class="catalog-card__photo" src="img/content-images/max-fish-catalog-mobile.png" srcset="img/content-images/max-fish-catalog-mobile@2x.png 2x" width="140" height="107" alt="Кэт энерджи с рыбой 1000 грамм.">
                 </picture>
               </a>
               <div class="catalog-card__data-container">
@@ -208,7 +210,7 @@
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
                   <h3 class="catalog-card__title">
-                    Cat energy pro 500 г
+                    Cat energy slim 500 г
                   </h3>
                 </a>
                 <div class="catalog-card__info">
@@ -244,7 +246,7 @@
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
                   <h3 class="catalog-card__title">
-                    Cat energy pro 1000 г
+                    Cat energy slim 1000 г
                   </h3>
                 </a>
                 <div class="catalog-card__info">
@@ -280,7 +282,7 @@
               <div class="catalog-card__data-container">
                 <a class="catalog-card__link__title" href="#">
                   <h3 class="catalog-card__title">
-                    Cat energy pro 500 г
+                    Cat energy slim 500 г
                   </h3>
                 </a>
                 <div class="catalog-card__info">
@@ -323,10 +325,12 @@
       </section>
 
       <section class="main-container__addition products-addition">
-        <div class="container">
+        <div class="product__title-container">
           <h2 class="products-addition__title">
             Дополнительные товары
           </h2>
+        </div>
+        <div class="container">
           <div class="products-addition__content-container">
           <ul class="products-addition__list list">
             <li class="products-addition__item">
@@ -407,7 +411,7 @@
           </ul>
 
           <p class="products-addition__action">
-            Закажите все и получите чехол для кота в подарок!
+            Закажите все и&nbsp;получите чехол для кота в подарок!
           </p>
         </div>
         </div>
@@ -423,7 +427,7 @@
               Адрес офиса продаж.
             </h2>
             <p class="location__diller">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
             <address class="location__address">
               ул. Большая Конюшенная, д. 19/8 <span class="location__city">Санкт-Петербург</span>
@@ -474,7 +478,7 @@
           </ul>
 
           <div class="copyright-container">
-            <a class="copyright-container__logo" href="#">
+            <a class="copyright-container__logo copyright-container__logo--text" href="#">
               <svg class="copyright__logo__text" width="113" height="20">
                 <use href="img/sprite.svg#html-text"></use>
               </svg>

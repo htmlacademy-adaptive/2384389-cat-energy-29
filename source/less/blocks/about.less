@@ -22,17 +22,18 @@
   color: @title-basic;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 33px;
   }
 }
 
 .about__list {
   display: grid;
-  gap: 24px;
+  gap: 20px;
   grid-template-rows: repeat(4, min(60px));
   align-items: center;
 
@@ -46,7 +47,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 324px 324px 324px 249px;
+    grid-template-columns: 324px 325px 325px 249px;
     grid-template-rows: min-content;
     gap:
     0;
